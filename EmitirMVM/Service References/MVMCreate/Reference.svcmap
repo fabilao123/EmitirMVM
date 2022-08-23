@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="170c883e-082d-4348-b888-73b1162fa1c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8140/ae/servicos/MVMCreate.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MVMCreate.wsdl" MetadataType="Wsdl" ID="1760d2f5-b3bf-41fa-b2b7-a262437577cd" SourceId="1" SourceUrl="http://localhost:8140/ae/servicos/MVMCreate.svc?wsdl" />
+    <MetadataFile FileName="MVMCreate.xsd" MetadataType="Schema" ID="ce0d08ae-3287-404a-bc11-529e6f210a34" SourceId="1" SourceUrl="http://localhost:8140/ae/servicos/MVMCreate.svc?xsd=xsd0" />
+    <MetadataFile FileName="MVMCreate1.xsd" MetadataType="Schema" ID="fa620e6d-e763-4f9b-ac75-bd5ded2c294b" SourceId="1" SourceUrl="http://localhost:8140/ae/servicos/MVMCreate.svc?xsd=xsd1" />
+    <MetadataFile FileName="MVMCreate2.xsd" MetadataType="Schema" ID="308674b8-1417-46ad-bfb0-634b51b926cd" SourceId="1" SourceUrl="http://localhost:8140/ae/servicos/MVMCreate.svc?xsd=xsd3" />
+    <MetadataFile FileName="MVMCreate3.xsd" MetadataType="Schema" ID="18c3c927-81eb-40f9-a241-b937a7749bd7" SourceId="1" SourceUrl="http://localhost:8140/ae/servicos/MVMCreate.svc?xsd=xsd2" />
+    <MetadataFile FileName="MVMCreate.disco" MetadataType="Disco" ID="45d437c1-ff44-4e7b-af3e-c3db6e3fc31c" SourceId="1" SourceUrl="http://localhost:8140/ae/servicos/MVMCreate.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

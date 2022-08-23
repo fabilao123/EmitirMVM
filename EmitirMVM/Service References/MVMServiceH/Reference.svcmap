@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f917b547-a583-4ba0-a356-34e37910ed44" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://elogh.fiat.com.br/ae/servicos/MVMCreate.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MVMCreate.wsdl" MetadataType="Wsdl" ID="3acb2a31-45bb-4f1d-80b7-fd5ce9dcd4b5" SourceId="1" SourceUrl="https://elogh.fiat.com.br/ae/servicos/MVMCreate.svc?wsdl" />
+    <MetadataFile FileName="MVMCreate.xsd" MetadataType="Schema" ID="92303d27-0746-42b6-8e7f-4e305a7ef056" SourceId="1" SourceUrl="https://elogh.fiat.com.br/ae/servicos/MVMCreate.svc?xsd=xsd2" />
+    <MetadataFile FileName="MVMCreate1.xsd" MetadataType="Schema" ID="f9cf7ead-0d08-42c4-80b0-2c3c7f314d93" SourceId="1" SourceUrl="https://elogh.fiat.com.br/ae/servicos/MVMCreate.svc?xsd=xsd0" />
+    <MetadataFile FileName="MVMCreate2.xsd" MetadataType="Schema" ID="06093b15-bac2-42f5-ba86-492a3fc2f2f5" SourceId="1" SourceUrl="https://elogh.fiat.com.br/ae/servicos/MVMCreate.svc?xsd=xsd1" />
+    <MetadataFile FileName="MVMCreate3.xsd" MetadataType="Schema" ID="838bd977-a089-4b25-acd5-8eba443ba0bc" SourceId="1" SourceUrl="https://elogh.fiat.com.br/ae/servicos/MVMCreate.svc?xsd=xsd3" />
+    <MetadataFile FileName="MVMCreate.disco" MetadataType="Disco" ID="3cf6c763-d755-423f-813b-e16d63104284" SourceId="1" SourceUrl="https://elogh.fiat.com.br/ae/servicos/MVMCreate.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

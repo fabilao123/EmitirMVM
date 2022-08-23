@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="IMvmSoapService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:element name="RegistrarBonus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="codigoEmpresa" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="codigoMVM" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="chaveNFE" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="hash" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="dadosPartNumber" nillable="true" type="tns:ArrayOfBonusPartNumberData" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="RegistrarBonusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="RegistrarBonusResult" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EmitirMVM">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="dados" type="tns:DadosMVM" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="NotasFiscais" nillable="true" type="tns:ArrayOfString" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EmitirMVMResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="EmitirMVMResult" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Metodo1">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="Metodo1Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="Metodo1Result" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Metodo2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="msg" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Metodo2Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="Metodo2Result" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Metodo3">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="obj" type="tns:DadosMVM" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Metodo3Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="Metodo3Result" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOfBonusPartNumberData">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="BonusPartNumberData" nillable="true" type="tns:BonusPartNumberData" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DadosMVM">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Hash" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Empresa" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Fornecedores" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="FornecedorEnvio" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="FornecedorTransportadora" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NomeMotorista" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NumeroRGMotorista" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NumeroCPFMotorista" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TipoCNHMotorista" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NumeroCNHMotorista" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DataValidadeCNHMotorista" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TipoVeiculo" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="DescricaoMarcaVeiculo" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NumeroPlacaVeiculo" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NumeroPlacaCarreta" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="QtdeAjudante" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="NumeroConhecimento" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Observacao" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="UsuarioCriacao" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="VlrTotalMercadorias" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PesoBruto" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfString">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="string" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BonusPartNumberData">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Bonus" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CodigoDesenho" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Qtde" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Status" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Descricao" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="CodigoDesenhoNovo" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMvmSoapService_RegistrarBonus_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarBonus" />
+  </wsdl:message>
+  <wsdl:message name="IMvmSoapService_RegistrarBonus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarBonusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMvmSoapService_EmitirMVM_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmitirMVM" />
+  </wsdl:message>
+  <wsdl:message name="IMvmSoapService_EmitirMVM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmitirMVMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMvmSoapService_Metodo1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Metodo1" />
+  </wsdl:message>
+  <wsdl:message name="IMvmSoapService_Metodo1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Metodo1Response" />
+  </wsdl:message>
+  <wsdl:message name="IMvmSoapService_Metodo2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Metodo2" />
+  </wsdl:message>
+  <wsdl:message name="IMvmSoapService_Metodo2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Metodo2Response" />
+  </wsdl:message>
+  <wsdl:message name="IMvmSoapService_Metodo3_InputMessage">
+    <wsdl:part name="parameters" element="tns:Metodo3" />
+  </wsdl:message>
+  <wsdl:message name="IMvmSoapService_Metodo3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Metodo3Response" />
+  </wsdl:message>
+  <wsdl:portType name="IMvmSoapService">
+    <wsdl:operation name="RegistrarBonus">
+      <wsdl:input message="tns:IMvmSoapService_RegistrarBonus_InputMessage" />
+      <wsdl:output message="tns:IMvmSoapService_RegistrarBonus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmitirMVM">
+      <wsdl:input message="tns:IMvmSoapService_EmitirMVM_InputMessage" />
+      <wsdl:output message="tns:IMvmSoapService_EmitirMVM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Metodo1">
+      <wsdl:input message="tns:IMvmSoapService_Metodo1_InputMessage" />
+      <wsdl:output message="tns:IMvmSoapService_Metodo1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Metodo2">
+      <wsdl:input message="tns:IMvmSoapService_Metodo2_InputMessage" />
+      <wsdl:output message="tns:IMvmSoapService_Metodo2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Metodo3">
+      <wsdl:input message="tns:IMvmSoapService_Metodo3_InputMessage" />
+      <wsdl:output message="tns:IMvmSoapService_Metodo3_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMvmSoapService_soap" type="tns:IMvmSoapService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarBonus">
+      <soap:operation soapAction="http://tempuri.org/IMvmSoapService/RegistrarBonus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmitirMVM">
+      <soap:operation soapAction="http://tempuri.org/IMvmSoapService/EmitirMVM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Metodo1">
+      <soap:operation soapAction="http://tempuri.org/IMvmSoapService/Metodo1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Metodo2">
+      <soap:operation soapAction="http://tempuri.org/IMvmSoapService/Metodo2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Metodo3">
+      <soap:operation soapAction="http://tempuri.org/IMvmSoapService/Metodo3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IMvmSoapService">
+    <wsdl:port name="BasicHttpBinding_IMvmSoapService_soap" binding="tns:BasicHttpBinding_IMvmSoapService_soap">
+      <soap:address location="https://localhost:5001/MvmService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
