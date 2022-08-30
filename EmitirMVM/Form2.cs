@@ -35,7 +35,7 @@ namespace EmitirMVM
                     foreach (String arquivo in ofd.FileNames)
                     {
                         lblFile.Text = "File: " + arquivo;
-                        txtMensagem.Text = File.ReadAllText(@arquivo).Trim();
+                        txtMensagem.Text = File.ReadAllText(@arquivo);
                         lblStatus.Text = "Status Mensagem : ";
                         lblIdResposta.Text = "Id Resposta: ";
 
@@ -45,8 +45,8 @@ namespace EmitirMVM
                                 txtMensagem.Text.Replace(txtMensagem.Text.Substring(211, 8), txtMvm.Text);
 
                         //return;
-                        string topicArn = "arn:aws:sns:us-east-1:234061357661:import-return-s746_topic_mq";
-                        string message = txtMensagem.Text.Trim();
+                        string topicArn = "arn:aws:sns:us-east-1:234061357661:import-return-s746_topic_mq_nonprod_master";
+                        string message = txtMensagem.Text;
 
                         var client = new AmazonSimpleNotificationServiceClient(region: Amazon.RegionEndpoint.USEast1);
 
@@ -89,7 +89,7 @@ namespace EmitirMVM
             }
 
             lblFile.Text = "File";
-            txtMensagem.Text = "";
+            //txtMensagem.Text = "";
             btPublicar.Enabled = true;
             btSelectFiles.Enabled = true;
             txtMvm.Enabled = true;
